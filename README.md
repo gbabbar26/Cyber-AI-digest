@@ -1,15 +1,15 @@
 # 📰 Cyber + AI Daily Digest
 
-A free, self-hosted daily email digest of cybersecurity and AI news — built with
+A free, self-hosted daily email digest of cybersecurity and AI news built with
 Claude (web search) + live Reddit discussions. Runs automatically on GitHub Actions
 at zero infrastructure cost. Fully customizable to any topic, not just cyber/AI.
 
 Built because generic news apps don't let you filter tightly enough for a specific
-field — this gives you a focused, skimmable digest every morning in your inbox.
+field this gives you a focused, skimmable digest every morning in your inbox.
 
 ## What you get each morning
 
-- Top cybersecurity stories (breaches, CVEs, patches) — with why-it-matters context
+- Top cybersecurity stories (breaches, CVEs, patches) with why-it-matters context
 - Top AI stories (new models, safety research, company news)
 - What practitioners are actually discussing on Reddit right now
 - One concept/tool explained in beginner-friendly terms, so it doubles as a learning tool
@@ -17,7 +17,7 @@ field — this gives you a focused, skimmable digest every morning in your inbox
 ## Quick start (10 minutes, no server needed)
 
 1. **Fork this repo** (button top-right)
-2. Get a free-tier [Anthropic API key](https://console.anthropic.com) — cost is roughly $0.02–$0.10 per run
+2. Get a free-tier [Anthropic API key](https://console.anthropic.com) cost is roughly $0.02–$0.10 per run
 3. Create a [Gmail App Password](https://myaccount.google.com/apppasswords) (requires 2-Step Verification on your Google account)
 4. In your fork: **Settings → Secrets and variables → Actions**, add:
 
@@ -29,13 +29,13 @@ field — this gives you a focused, skimmable digest every morning in your inbox
    | `EMAIL_APP_PASSWORD` | the 16-character app password |
 
 5. Edit `config.yaml` to set your topics, subreddits, and title (see below)
-6. Edit the `cron` line in `.github/workflows/daily-digest.yml` for your preferred time (GitHub Actions uses UTC — [crontab.guru](https://crontab.guru) helps)
+6. Edit the `cron` line in `.github/workflows/daily-digest.yml` for your preferred time (GitHub Actions uses UTC [crontab.guru](https://crontab.guru) helps)
 7. Go to the **Actions** tab → "Daily Cyber + AI Digest" → **Run workflow** to test it manually
 8. Once it works, it runs automatically every day — no server, no computer needed
 
 ## Customizing for any topic
 
-This isn't locked to cyber/AI — edit `config.yaml`:
+This isn't locked to cyber/AI edit `config.yaml`:
 
 ```yaml
 digest_title: "Climate Tech Weekly"
@@ -47,7 +47,7 @@ reddit_posts_per_sub: 5
 model: "claude-sonnet-4-6"
 ```
 
-No code changes needed — the script reads everything from this file.
+No code changes needed the script reads everything from this file.
 
 ## Local testing
 
@@ -78,7 +78,3 @@ tier for private ones too.
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). PRs and topic-config examples welcome.
-
-## License
-
-MIT — do whatever you'd like with this.
