@@ -1,0 +1,31 @@
+name: Daily Cyber + AI Digest
+
+on:
+  schedule:
+    # Runs at 06:30 UTC every day — adjust to your timezone.
+    # e.g. for 7:30 AM IST, use "00:00" UTC (IST = UTC+5:30)
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}   # lets you manually trigger a run from the Actions tab
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run digest script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        run: python digest.py

@@ -1,0 +1,22 @@
+# Customize your digest here. No coding needed — just edit these values.
+# Secrets (API keys, email password) do NOT go here — see .env.example instead.
+
+digest_title: "Cyber + AI Daily Digest"
+
+# Plain-language description of what the digest should cover.
+# Examples: "cybersecurity and AI", "cloud security and DevSecOps",
+# "AI safety research and LLM security"
+topics: "cybersecurity and AI"
+
+# Subreddits to pull hot discussions from (no r/ prefix)
+subreddits:
+  - cybersecurity
+  - netsec
+  - artificial
+  - MachineLearning
+  - AI_Agents
+
+reddit_posts_per_sub: 5
+
+# Claude model to use. claude-sonnet-4-6 is a good balance of cost/quality.
+model: "claude-sonnet-4-6"
