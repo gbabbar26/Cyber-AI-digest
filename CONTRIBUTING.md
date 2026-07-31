@@ -2,9 +2,9 @@
 
 Contributions are welcome! Ways to help:
 
-- **New digest topics/templates** — share your `config.yaml` variants (e.g. cloud security, AI safety research) as examples in `examples/`
-- **Additional delivery methods** — Slack/Discord webhook support, RSS feed output, etc.
-- **Bug fixes / reliability** — e.g. better error handling if Reddit or the API is briefly down
+- **New digest topics/templates** - share your `config.yaml` variants (e.g. cloud security, AI safety research) as examples in `examples/`
+- **Additional delivery methods** - Slack/Discord webhook support, RSS feed output, etc.
+- **Bug fixes / reliability** - e.g. better error handling if Reddit or the API is briefly down
 
 ## How to contribute
 
